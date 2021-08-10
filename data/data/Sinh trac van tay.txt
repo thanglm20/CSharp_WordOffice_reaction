@@ -1,0 +1,146 @@
+Yêu cầu về phần mềm sinh trắc vân tay
+Giao diện như trong hình
+Cột bên phải để nhập vào hình ảnh 10 đầu ngón tay + số đường vân tay trên mỗi ngón ( ridge count - có giá trị từ 0-99)
+Chủng vân tay là dropbox chứa các giá trị AT / AS / UL / RL / WT / WS / WP / WE / WI / WD / WX
+cái ảnh ở giữa chỉ là để người dùng dễ nhìn ra chủng vân tay thôi, ko có tác dụng gì khác
+-----------------
+Nút tính toán: Khi ấn nút này thì các giá trị sẽ hiện ra ở cột bên phải
+Nút xuất báo cáo: Khi ấn nút này thì sẽ hiện 1 hộp thoại open...
+định dạng file: .docx ( word 2020)
+ví dụ chọn file abc.docx
+phần mềm sẽ tìm tất cả những chỗ nào có chữ a1 trong abc.docx thay bằng giá trị A1 vừa tính được
+tương tự cho đến A37, B1-B6, pic0-pic10 ,c1-c10
+----------
+Ví dụ
+L1=1
+L2=2
+L3=3
+L4=4
+L5=5
+R1=6
+R2=7
+R3=8
+R4=9
+R5=10
+Công thức tính như sau
+A27 = L1+L2+L3+L4+L5+R1+R2+R3+R4+R5
+A1 = (L1+R1) / A27 %  - với số liệu ở trên thì A1= ( 1+2)/55 % = 1.82%
+A2 = (L2+R2) / A27 %
+A3 = (L3+R3) / A27 %
+A4 = (L4+R4) / A27 %
+A5 = (L5+R5) / A27 %
+A6 = L1+L2+L3+L4+L5
+A7 = R1+R2+R3+R4+R5
+A8 = A7/(A6+A7) %
+A9 = A6/(A6+A7) %
+A10 = R1 / A27 %
+A11 = L1 / A27 %
+A12 = R2 / A27%
+A13 = L2 / A27 %
+A14 = R3 / A27 %
+A15 = L3 / A27 %
+A16 = R4 / A27%
+A17 = L4 / A27 %
+A18 = R5 / A27%
+A19 = L5 / A27 %
+A20 = (A18+A19) / (A14+A15+A16+A17+A18+A19) %
+A21 = (A16+A17) / (A14+A15+A16+A17+A18+A19) %
+A20 = (A14+A15) / (A14+A15+A16+A17+A18+A19) %
+A23 = (A10+A11+A12) 
+A24 = (A12+A13) 
+A25 = (A11+A12) 
+A26 = (A13+A18+A19) 
+A28 = (A17 + A16) / A27 * 1.1
+A29 = (A18 + A13) / A27 * 1.05
+A30 = (A18 + A19) / A27 * 1.14
+A31 = (A14 + A15) / A27 * 1.21
+A32 = (A24 + A26) / (A24 + A25 + A26 + A27) 
+A33 = (A23 + A25) / (A24 + A25 + A26 + A27) 
+A34 = A16 / A7 * 0.93
+A35 = A12 / A7 * 1.25
+A50 - A59 : là số thứ tự tương ứng của A10-A19 theo giá trị ( 1 là lớn nhất, 10 là nhỏ nhất)
+ví dụ: trong các số A10-A19 số A17 to nhất thì A57 sẽ = 1 ( xếp thứ nhất)
+A13 bé nhất thì A53=10 ( xếp thứ 10)
+-----------------
+A36 và A37
+có 10 giá trị c1,c2,c3,c4,c5,c6,c7,c8,c9,c10 là kết quả của drop box
+các giá trị này sẽ dưới dạng text , 1 trong những chữ sau AT / AS / UL / RL / WT / WS / WP / WE / WI / WD / WX
+các giá trị C ứng với các ngón như sau
+C1-L1, ..... C5-L5
+C6-R1....C10 - R5
+với
+WT / WS / WP / WE / WI / WD / WX: đại bàng
+AT/AS: chim công
+UL: chim cú
+RL: bồ câu
+A36: trong 10 giá trị đó cái nào nhiều nhất thì A36 là kiểu tính cách đó 
+ví dụ nhiều UL nhất thì a36= chim cú, nhiều W nhất thì A36 = đại bàng
+A37: giá trị nhiều thứ nhì
+
+----------------
+ví dụ:   c1=WT c2=WT c3=WS c4=AS c5=AT c6=UL c7=UL c8=UL c9=WX c10=WX
+thì A36 = đại bàng
+A37 = chim cú
+--------
+A36_1 : toàn bộ trang 6 của bản báo cáo , gồm hình con (đại bàng/công/cú/bồ câu) và các đoạn text tương ứng
+A36_2 : toàn bộ trang 7 của bản báo cáo, cũng gồm text, hình ảnh tương ứng
+----------
+Trang 25 - đếm các giá trị c1-c10
+A38: số ngón có type W , đơn vị % ( ví dụ có 6 ngón có W thì A38 = 60%)
+A39: số ngón có type UL , đơn vị % 
+A40: số ngón có type AS/AT , đơn vị % 
+A41: số ngón có type RL , đơn vị %
+chú ý: tổng a38+a39+a40+a41 = 100%
+---------
+trang 28
+a42: là 1 cái biểu đồ có 5 cột , 5 giá trị ở 5 cột là A1 A2 A3 A4 A5
+-------
+trang 34
+biểu đồ 10 cột ngang
+xếp các giá trị A10-A19 từ cao xuống thấp
+mỗi giá trị có text tương ứng như sau
+A10: QUẢN LY
+A11: LÃNH ĐẠO
+A12: LẬP TRÌNH, LOGIC
+A13: TƯỞNG TƯỢNG
+A14:  VẬN ĐỘNG TINH
+A15:  VẬN ĐỘNG THÔ
+A16: NGÔN LUẬN
+A17: THÍNH GIÁC
+A18: HÌNH ẢNH
+A19: ĐỌC, QUAN SÁT
+--------
+trang 35
+có 1 bảng và 1 biểu đồ
+BảngL
+A10i-A19i : xếp hạng của A10-A19 theo thứ tự giảm dần  (có giá trị từ 1 đến 10)
+ví dụ A15 to nhất thì A15i = 1
+A13 bé nhất thì A13i = 10
+
+biểu đồ :
+có 10 giá trị a10-a19 tương đương với các ngón L1..L5 R1..R5
+----------
+trang 41
+biểu đồ tròn có 2 giá trị A1 và A2 , đơn vị: % ( vd a1=6 a2 = 4 thì biểu đồ sẽ là 1 hình tròn có 1 phần 60% 1 phần 40%)
+-------
+trang 43
+biểu đồ có 2 giá trị A16 và A17
+trang 44
+biểu đồ có 2 giá trị A18 và A19
+trang45
+biểu đồ có 2 giá trị A14 và A15
+trang 48
+biểu đồ 8 giá trị A28-A35
+trang 57
+biểu đồ 4 giá trị A23-a24-a25-a26
+Trang 63-64-65-66
+mỗi trang có 1 biểu đồ , đặt tất cả các giá trị ngẫu nhiên hết ( từ 5-25)
+Trang 68-69-70
+A20i, A21i,A22i có giá trị text ( Tốt nhất, Nên làm, Có thể)
+vd A20 to nhất trong 3 số A20,A21,A22 thì A20i = "Tốt nhất"
+A21 bé nhất thì A21i = "Có thể"
+
+giá có thể trả: 3 triệu
+thời gian hoàn thành: 2 tuần
+ngôn ngữ lập trình sử dụng: gì cũng được
+giao kèm mã nguồn

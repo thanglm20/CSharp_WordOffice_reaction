@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokyoBiometric", "TokyoBiometric.csproj", "{2394CDCC-0D61-417A-A86D-818569731FFE}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "SetupTokyoBiometric", "..\SetupTokyoBiometric\SetupTokyoBiometric.aiproj", "{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.All|Any CPU.Build.0 = Release|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2394CDCC-0D61-417A-A86D-818569731FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.All|Any CPU.ActiveCfg = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.All|Any CPU.Build.0 = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.Debug|Any CPU.Build.0 = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.DefaultBuild|Any CPU.ActiveCfg = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{53DDF98B-F5FB-4866-B05C-5B9C4ED9F062}.Release|Any CPU.Build.0 = DefaultBuild
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D84AC04A-83B8-4557-85CA-1522AE791C86}
+	EndGlobalSection
+EndGlobal
