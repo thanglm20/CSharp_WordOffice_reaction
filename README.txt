@@ -1,12 +1,7 @@
-/*
-    Module: Tokyo Biometric
-    Author: ThangLmb
-    Date: June 24, 2021
-*/
 
+## Introduction
 
-
-/*
+This application generates Word files, and draws tables, charts, images, ... 
   
   Cách Cài đặt trực tiếp Microsoft.Office.Interop.Word.dll vào Windows.
   Sao chép tệp .DLL vào thư mục C:\Windows\System32 (nếu sử dụng HĐH 32 bit)
